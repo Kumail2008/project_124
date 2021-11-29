@@ -1,5 +1,8 @@
 from flask import Flask,jsonify,request
 
+
+app = Flask(__name__)
+
 tasks =  [{
     'Contact':'9987644456',
     'Name':'Raju',
@@ -9,8 +12,7 @@ tasks =  [{
 {   'Contact':'9876543222',
     'Name':'Rahul',
     'done':False,
-    'id':2
-
+    'id':2}]
 @app.route("/add_data",methods = ["POST"])
 
 def add_task():
